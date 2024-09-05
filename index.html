@@ -77,14 +77,14 @@
         <p>Click the button to get your unique number!</p>
         <button id="generateBtn">Generate Awesome Number</button>
         <div id="result">---</div>
-        <div id="counter">Numbers generated: 0 / 500</div>
+        <div id="counter">Numbers generated: 0 / 50</div>
     </div>
 
     <script>
         const generateBtn = document.getElementById('generateBtn');
         const result = document.getElementById('result');
         const counter = document.getElementById('counter');
-        let numbers = Array.from({length: 500}, (_, i) => i + 1);
+        let numbers = Array.from({length: 15}, (_, i) => i + 1);
         let count = 0;
 
         function shuffleArray(array) {
@@ -97,7 +97,7 @@
         shuffleArray(numbers);
 
         function generateRandomNumber() {
-            if (count < 500) {
+            if (count < 15) {
                 const randomNumber = numbers[count];
                 result.textContent = randomNumber;
                 result.classList.add('animate');
